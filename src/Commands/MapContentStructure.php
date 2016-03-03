@@ -59,9 +59,9 @@ class MapContentStructure extends Command
     protected function makeWriter()
     {
         return app()->make(ContentWriter::class);
-//        $fileSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromYmlFile(base_path('edible.yml'));
-//        $databaseSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromRepo(new ContentRepository());
-//        return new ContentWriter($fileSnapshot, $databaseSnapshot);
+        $fileSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromYmlFile(base_path('edible.yaml'));
+        $databaseSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromRepo(new ContentRepository());
+        return new ContentWriter($fileSnapshot, $databaseSnapshot);
     }
 
     protected function showChanges($additions, $deletions)

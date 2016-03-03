@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46d7e0e7-75a2-4e68-ae27-dc25ba96731c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Exceptions/MissingEdibleFileException.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Commands/Inspire.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/MapContentStructure.php" afterPath="$PROJECT_DIR$/src/Commands/MapContentStructure.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EdibleServiceProvider.php" afterPath="$PROJECT_DIR$/src/EdibleServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/ContentWriterTest.php" afterPath="$PROJECT_DIR$/tests/ContentWriterTest.php" />
     </list>
     <ignored path="edible.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,12 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EdibleServiceProvider.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/EdibleServiceProvider.php">
+      <file leaf-file-name="MapContentStructure.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Commands/MapContentStructure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29667813">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-              <folding />
+            <state vertical-scroll-proportion="0.8178694">
+              <caret line="61" column="112" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
+              <folding>
+                <element signature="e#49#92#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -571,35 +568,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/MapContentStructure.php">
+    <entry file="file://$PROJECT_DIR$/src/EdibleServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82588774">
-          <caret line="63" column="69" selection-start-line="61" selection-start-column="10" selection-end-line="63" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.6471936">
+          <caret line="36" column="116" selection-start-line="36" selection-start-column="116" selection-end-line="36" selection-end-column="116" />
           <folding>
-            <marker date="1457022771000" expanded="true" signature="53:312" placeholder="..." />
-            <marker date="1457022771000" expanded="true" signature="355:2329" placeholder="{...}" />
-            <marker date="1457022771000" expanded="true" signature="365:451" placeholder=" The name and signature of the console command. ..." />
-            <marker date="1457022771000" expanded="true" signature="503:575" placeholder=" The console command description. ..." />
-            <marker date="1457022771000" expanded="true" signature="694:738" placeholder=" Create a new command instance. ..." />
-            <marker date="1457022771000" expanded="true" signature="774:817" placeholder="{...}" />
-            <marker date="1457022771000" expanded="true" signature="826:931" placeholder=" Execute the console command. ..." />
-            <marker date="1457022771000" expanded="true" signature="962:1420" placeholder="{...}" />
-            <marker date="1457022771000" expanded="true" signature="1022:1081" placeholder="..." />
-            <marker date="1457022771000" expanded="true" signature="1268:1359" placeholder="..." />
-            <marker date="1457022771000" expanded="true" signature="1367:1412" placeholder="..." />
-            <marker date="1457022771000" expanded="true" signature="1457:1830" placeholder="{...}" />
-            <marker date="1457022771000" expanded="true" signature="1890:2327" placeholder="{...}" />
-            <marker date="1457022771000" expanded="true" signature="1987:2134" placeholder="..." />
-            <marker date="1457022771000" expanded="true" signature="2169:2320" placeholder="..." />
+            <marker date="1457023203000" expanded="false" signature="44:186" placeholder="..." />
+            <marker date="1457023203000" expanded="true" signature="239:1650" placeholder="{...}" />
+            <marker date="1457023203000" expanded="true" signature="280:356" placeholder=" Bootstrap the application services. ..." />
+            <marker date="1457023203000" expanded="true" signature="385:957" placeholder="{...}" />
+            <marker date="1457023203000" expanded="true" signature="417:949" placeholder="..." />
+            <marker date="1457023203000" expanded="true" signature="418:934" placeholder="..." />
+            <marker date="1457023203000" expanded="true" signature="966:1041" placeholder=" Register the application services. ..." />
+            <marker date="1457023203000" expanded="true" signature="1074:1565" placeholder="{...}" />
+            <marker date="1457023203000" expanded="true" signature="1106:1474" placeholder="..." />
+            <marker date="1457023203000" expanded="true" signature="1145:1473" placeholder="..." />
+            <marker date="1457023203000" expanded="true" signature="1597:1648" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EdibleServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/src/Commands/MapContentStructure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29667813">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding />
+        <state vertical-scroll-proportion="0.8178694">
+          <caret line="61" column="112" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
+          <folding>
+            <element signature="e#49#92#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

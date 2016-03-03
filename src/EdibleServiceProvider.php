@@ -34,7 +34,7 @@ class EdibleServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(ContentWriter::class, function ($app) {
-            $fileSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromYmlFile(base_path('edible.yml'));
+            $fileSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromYmlFile(base_path('edible.yaml'));
             $databaseSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromRepo(new ContentRepository());
 
             return new ContentWriter($fileSnapshot, $databaseSnapshot);
