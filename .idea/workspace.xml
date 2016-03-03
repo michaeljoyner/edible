@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46d7e0e7-75a2-4e68-ae27-dc25ba96731c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/MapContentStructure.php" afterPath="$PROJECT_DIR$/src/Commands/MapContentStructure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EdibleServiceProvider.php" afterPath="$PROJECT_DIR$/src/EdibleServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="edible.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,14 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MapContentStructure.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Commands/MapContentStructure.php">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6174112">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding>
-                <element signature="e#49#92#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.12371134">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,6 +48,7 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/EdibleServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Commands/MapContentStructure.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -239,7 +238,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -589,11 +588,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Commands/MapContentStructure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6174112">
+        <state vertical-scroll-proportion="1.8556701">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
-            <element signature="e#49#92#0#PHP" expanded="true" />
+            <marker date="1457023563000" expanded="true" signature="53:312" placeholder="..." />
+            <marker date="1457023563000" expanded="true" signature="355:2274" placeholder="{...}" />
+            <marker date="1457023563000" expanded="true" signature="365:451" placeholder=" The name and signature of the console command. ..." />
+            <marker date="1457023563000" expanded="true" signature="503:575" placeholder=" The console command description. ..." />
+            <marker date="1457023563000" expanded="true" signature="694:738" placeholder=" Create a new command instance. ..." />
+            <marker date="1457023563000" expanded="true" signature="774:817" placeholder="{...}" />
+            <marker date="1457023563000" expanded="true" signature="826:931" placeholder=" Execute the console command. ..." />
+            <marker date="1457023563000" expanded="true" signature="962:1420" placeholder="{...}" />
+            <marker date="1457023563000" expanded="true" signature="1022:1081" placeholder="..." />
+            <marker date="1457023563000" expanded="true" signature="1268:1359" placeholder="..." />
+            <marker date="1457023563000" expanded="true" signature="1367:1412" placeholder="..." />
+            <marker date="1457023563000" expanded="true" signature="1457:1775" placeholder="{...}" />
+            <marker date="1457023563000" expanded="true" signature="1835:2272" placeholder="{...}" />
+            <marker date="1457023563000" expanded="true" signature="1932:2079" placeholder="..." />
+            <marker date="1457023563000" expanded="true" signature="2114:2265" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12371134">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
