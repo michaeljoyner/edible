@@ -18,7 +18,11 @@ class EdibleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__ . '/../resources/migrations/2016_01_26_004711_create_pages_table.php' => database_path('migrations/2016_01_26_004711_create_pages_table.php'),
+            __DIR__ . '/../resources/migrations/2016_01_26_004750_create_textblocks_table.php' => database_path('migrations/2016_01_26_004750_create_textblocks_table.php'),
+            __DIR__ . '/../resources/migrations/2016_01_26_004801_create_galleries_table.php' => database_path('migrations/2016_01_26_004750_create_textblocks_table.php'),
+        ], 'migrations');
     }
 
     /**
@@ -35,13 +39,7 @@ class EdibleServiceProvider extends ServiceProvider
             return new ContentWriter($fileSnapshot, $databaseSnapshot);
         });
 
-        $this->publishes([
-            __DIR__ . '/../resources/migrations/2016_01_26_004711_create_pages_table.php' => database_path('migrations/2016_01_26_004711_create_pages_table.php'),
-            __DIR__ . '/../resources/migrations/2016_01_26_004750_create_textblocks_table.php' => database_path('migrations/2016_01_26_004750_create_textblocks_table.php'),
-        __DIR__ . '/../resources/migrations/2016_01_26_004801_create_galleries_table.php' => database_path('migrations/2016_01_26_004750_create_textblocks_table.php'),
-        ], 'migrations');
-
-        $this->commands(['Michaeljoyner\Edible\Console\MapContentStructure']);
+        $this->commands(['Michaeljoyner\Edible\Commands\MapContentStructure']);
     }
 
     public function provides()
