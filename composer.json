@@ -1,7 +1,7 @@
 {
   "name": "michaeljoyner/edible",
   "description": "Very simple, very opinionated micro editable content management. Note that the end user cannot create new editable areas.",
-  "type": "content management",
+  "type": "",
   "license": "MIT",
   "authors": [
     {
