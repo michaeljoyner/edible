@@ -197,3 +197,7 @@ class ContentWriterTest extends TestCase
 
 
 }
+//override config helper used in Spatie's MediaLibrary HasMediaTrait
+function config() {
+    return \Spatie\MediaLibrary\Media::class;
+}

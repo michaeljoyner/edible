@@ -4,6 +4,7 @@ namespace Michaeljoyner\Edible;
 
 use ContentWriter;
 use Illuminate\Support\ServiceProvider;
+use Spatie\MediaLibrary\MediaLibraryServiceProvider;
 use Symfony\Component\Yaml\Parser;
 
 class EdibleServiceProvider extends ServiceProvider
@@ -38,6 +39,8 @@ class EdibleServiceProvider extends ServiceProvider
 
             return new ContentWriter($fileSnapshot, $databaseSnapshot);
         });
+
+
 
         $this->commands(['Michaeljoyner\Edible\Commands\MapContentStructure']);
     }
