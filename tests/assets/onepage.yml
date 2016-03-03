@@ -1,0 +1,14 @@
+pages:
+  home:
+      description: The homepage
+      textblocks:
+          intro:
+              description: The homepage intro
+              allows_html: false
+          spiel:
+              description: Company story
+              allows_html: true
+      galleries:
+          slider:
+              description: Homepage banner slide images
+              is_single: false

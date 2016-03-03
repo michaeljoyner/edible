@@ -1,0 +1,24 @@
+pages:
+  home:
+      description: The homepage
+      textblocks:
+          intro:
+              description: The homepage intro
+              allows_html: false
+          outro:
+              description: The homepage outro
+              allows_html: true
+      galleries:
+          slider:
+              description: Homepage banner slide images
+              is_single: false
+  contact:
+        description: The contact page
+        textblocks:
+            intro:
+                description: The Contact intro
+                allows_html: false
+        galleries:
+            slider:
+              description: Contact page slider
+              is_single: true
