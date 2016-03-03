@@ -21,7 +21,7 @@ class EdibleServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../resources/migrations/2016_01_26_004711_create_pages_table.php' => database_path('migrations/2016_01_26_004711_create_pages_table.php'),
             __DIR__ . '/../resources/migrations/2016_01_26_004750_create_textblocks_table.php' => database_path('migrations/2016_01_26_004750_create_textblocks_table.php'),
-            __DIR__ . '/../resources/migrations/2016_01_26_004801_create_galleries_table.php' => database_path('migrations/2016_01_26_004750_create_textblocks_table.php'),
+            __DIR__ . '/../resources/migrations/2016_01_26_004801_create_galleries_table.php' => database_path('migrations/2016_01_26_004801_create_galleries_table.php'),
         ], 'migrations');
     }
 
