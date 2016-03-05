@@ -32,15 +32,13 @@ class EdibleServiceProvider extends ServiceProvider
             __DIR__.'/../resources/views' => resource_path('views/vendor/edible'),
         ]);
 
-        if(config('edible.menu_view')) {
-            view()->composer(config('menu_view'), function ($view) {
-                $ediblePages = (new ContentRepository())->getPageListWithUrls();
-
-                return $view->with(compact('ediblePages'));
-            });
-        }
-
-
+//        if(config('edible.menu_view')) {
+//            view()->composer(config('menu_view'), function ($view) {
+//                $ediblePages = (new ContentRepository())->getPageListWithUrls();
+//
+//                return $view->with('ediblePages', $ediblePages);
+//            });
+//        }
     }
 
     /**
@@ -53,10 +51,6 @@ class EdibleServiceProvider extends ServiceProvider
         $this->commands(['Michaeljoyner\Edible\Commands\MapContentStructure']);
     }
 
-    public function provides()
-    {
-        return [ContentWriter::class];
-    }
 
     private function publishesMigrations()
     {

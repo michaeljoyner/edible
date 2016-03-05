@@ -51,4 +51,3 @@
             </footer>
         </div>
     @endforeach
-@endsection
