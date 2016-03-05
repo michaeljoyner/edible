@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'package-edible', 'namespace' => 'Michaeljoyner\Edible\Http'], function() {
+Route::group(['prefix' => 'package-edible', 'middleware' => 'auth', 'namespace' => 'Michaeljoyner\Edible\Http'], function() {
     Route::get('pages/{pageId}', 'EdiblesController@showPage');
     Route::get('pages/{pageId}/textblocks/{textblockId}/edit', 'EdiblesController@editTextblock');
     Route::get('pages/{pageId}/galleries/{galleryId}/edit', 'EdiblesController@editGallery');

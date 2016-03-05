@@ -20,7 +20,7 @@ class EdiblesController extends Controller
     {
         $page = Page::with('textblocks', 'galleries')->findOrFail($pageId);
 
-        return view('edible::showpage')->with(compact('page'));
+        return view('vendor.edible.showpage')->with(compact('page'));
     }
 
     public function editTextblock($pageId, $textblockId)
@@ -28,7 +28,7 @@ class EdiblesController extends Controller
         $textblock = Textblock::findOrFail($textblockId);
         $page = Page::findOrFail($pageId);
 
-        return view('edible::textblock')->with(compact('textblock', 'page'));
+        return view('vendor.edible.textblock')->with(compact('textblock', 'page'));
     }
 
     public function editGallery($pageId, $galleryId)
@@ -36,7 +36,7 @@ class EdiblesController extends Controller
         $gallery = Gallery::findOrFail($galleryId);
         $page = Page::findOrFail($pageId);
 
-        return view('edible::gallery')->with(compact('gallery', 'page'));
+        return view('vendor.edible.gallery')->with(compact('gallery', 'page'));
     }
 
     public function updateTextblock(Request $request, $textblockId)
