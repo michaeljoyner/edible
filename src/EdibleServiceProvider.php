@@ -33,10 +33,6 @@ class EdibleServiceProvider extends ServiceProvider
         if (! $this->app->routesAreCached()) {
             require __DIR__.'/../resources/routes/routes.php';
         }
-
-        $this->app->router->get('fuck', function() { return 'fucker'; });
-
-
     }
 
     /**
