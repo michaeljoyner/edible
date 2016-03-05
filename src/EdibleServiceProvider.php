@@ -19,10 +19,9 @@ class EdibleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        if (! $this->app->routesAreCached()) {
-//            require __DIR__.'/../resources/routes/routes.php';
-//        }
-        require __DIR__.'/../resources/routes/routes.php';
+        if (! $this->app->routesAreCached()) {
+            require __DIR__.'/../resources/routes/routes.php';
+        }
 
         $this->publishesMigrations();
         $this->publishesConfig();

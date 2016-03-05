@@ -15,7 +15,6 @@ class EdiblesController extends Controller
 {
     public function showPage($pageId)
     {
-        dd($pageId. ' Fuck yooooooo!');
         $page = Page::with('textblocks', 'galleries')->findOrFail($pageId);
 
         return view('edible::showpage')->with(compact('page'));
