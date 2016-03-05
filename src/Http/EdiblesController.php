@@ -10,6 +10,9 @@ namespace Michaeljoyner\Edible\Http;
 
 
 use Illuminate\Routing\Controller;
+use Michaeljoyner\Edible\Models\Gallery;
+use Michaeljoyner\Edible\Models\Page;
+use Michaeljoyner\Edible\Models\Textblock;
 
 class EdiblesController extends Controller
 {

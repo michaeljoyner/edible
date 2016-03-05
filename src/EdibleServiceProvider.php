@@ -26,6 +26,12 @@ class EdibleServiceProvider extends ServiceProvider
         $this->publishesMigrations();
         $this->publishesConfig();
 
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'edible');
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('views/vendor/edible'),
+        ]);
+
         if(config('edible.menu_view')) {
             view()->composer(config('menu_view'), function ($view) {
                 $ediblePages = (new ContentRepository())->getPageListWithUrls();
@@ -57,9 +63,9 @@ class EdibleServiceProvider extends ServiceProvider
         $filesMap = [];
         $resourcePath = __DIR__ . '/../resources/migrations/';
         $files = [
-            '2016_01_26_004711_create_pages_table.php',
-            '2016_01_26_004750_create_textblocks_table.php',
-            '2016_01_26_004801_create_galleries_table.php'
+            '2016_01_26_004711_create_edible_pages_table.php',
+            '2016_01_26_004750_create_edible_textblocks_table.php',
+            '2016_01_26_004801_create_edible_galleries_table.php'
         ];
 
         foreach ($files as $file) {

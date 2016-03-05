@@ -1,0 +1,1 @@
+<h1>Galleries yay</h1>
