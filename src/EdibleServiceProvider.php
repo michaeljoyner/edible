@@ -4,7 +4,6 @@ namespace Michaeljoyner\Edible;
 
 use ContentWriter;
 use Illuminate\Support\ServiceProvider;
-use Spatie\MediaLibrary\MediaLibraryServiceProvider;
 use Symfony\Component\Yaml\Parser;
 
 class EdibleServiceProvider extends ServiceProvider
@@ -41,6 +40,11 @@ class EdibleServiceProvider extends ServiceProvider
     public function register()
     {
         $this->commands(['Michaeljoyner\Edible\Commands\MapContentStructure']);
+    }
+
+    public function provides()
+    {
+        return [ContentWriter::class];
     }
 
 

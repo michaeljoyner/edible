@@ -7,4 +7,6 @@ Route::group(['prefix' => 'package-edible', 'middleware' => 'auth', 'namespace' 
     Route::post('textblocks/{textblockId}', 'EdiblesController@updateTextblock');
     Route::post('galleries/{galleryId}/uploads', 'EdiblesController@storeUploadedImage');
     Route::get('galleries/{galleryId}/uploads', 'EdiblesController@getGalleryImages');
+    Route::get('galleries/{galleryId}/order', 'EdiblesController@showGalleryForOrdering');
+    Route::post('galleries/{galleryId}/order', 'EdiblesController@setGalleryOrder');
 });

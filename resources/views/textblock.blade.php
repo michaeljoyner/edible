@@ -1,11 +1,11 @@
-{{--textblock edit page--}}
+@extends('admin.base')
 
-{{--to go in body--}}
-    <div class="edible-page-header">
+@section('content')
+    <div class="ed-page-header">
         <h1 class="pull-left">Edit {{ $textblock->name }} of the {{ $page->name }} page</h1>
-        <div class="rs-header-actions pull-right">
+        <div class="ed-header-actions pull-right">
             <a href="/package-edible/pages/{{ $page->id }}">
-                <div class="btn rs-btn btn-orange">
+                <div class="btn ed-btn btn-orange">
                     Back to {{ ucwords($page->name) }}
                 </div>
             </a>
@@ -20,11 +20,12 @@
         {!! Form::textarea('content', null, ['class' => 'form-control', 'id' => 'ed-content']) !!}
     </div>
     <div class="form-group">
-        <button type="submit" class="btn rs-btn">Save Changes</button>
+        <button type="submit" class="btn ed-btn">Save Changes</button>
     </div>
     {!! Form::close() !!}
+@endsection
 
-{{--to go with scripts--}}
+@section('bodyscripts')
     @if($textblock->allows_html)
         <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
         <script>
@@ -39,3 +40,4 @@
             });
         </script>
     @endif
+@endsection

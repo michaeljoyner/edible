@@ -13,6 +13,7 @@ use Illuminate\Routing\Controller;
 use Michaeljoyner\Edible\Models\Gallery;
 use Michaeljoyner\Edible\Models\Page;
 use Michaeljoyner\Edible\Models\Textblock;
+use Illuminate\Http\Request;
 
 class EdiblesController extends Controller
 {
@@ -72,5 +73,22 @@ class EdiblesController extends Controller
         });
 
         return response()->json($images);
+    }
+
+    public function showGalleryForOrdering($id)
+    {
+        $gallery = Gallery::findOrFail($id);
+        $images = $gallery->getOrdered();
+
+        return view('admin.galleries.order')->with(compact('gallery', 'images'));
+    }
+
+    public function setGalleryOrder(Request $request, $id)
+    {
+        $this->validate($request, ['order' => 'required|array']);
+        $gallery = Gallery::findOrFail($id);
+        $gallery->setOrder($request->order);
+
+        return response()->json('ok');
     }
 }

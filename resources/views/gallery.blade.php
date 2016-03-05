@@ -1,14 +1,15 @@
-{{--gallery view--}}
+@extends('admin.base')
 
-{{--to go in head--}}
-<meta id="x-token" property="CSRF-token" content="{{ Session::token() }}"/>
+@section('head')
+    <meta id="x-token" property="CSRF-token" content="{{ Session::token() }}"/>
+@endsection
 
-{{--to go in body--}}
-    <div class="edibles-page-header">
+@section('content')
+    <div class="ed-page-header">
         <h1 class="pull-left">Upload to the  {{ $gallery->name }} gallery of the {{ $page->name }} page</h1>
-        <div class="rs-header-actions pull-right">
+        <div class="ed-header-actions pull-right">
             <a href="/package-edible/pages/{{ $page->id }}">
-                <div class="btn rs-btn btn-orange">
+                <div class="btn ed-btn btn-orange">
                     Back to {{ ucwords($page->name) }}
                 </div>
             </a>
@@ -38,8 +39,9 @@
             ></dropzone>
         </div>
     @endif
+@endsection
 
-{{--to go in scripts section--}}
+@section('bodyscripts')
     @if($gallery->is_single)
         <script>
             new Vue({
@@ -58,3 +60,4 @@
             });
         </script>
     @endif
+@endsection

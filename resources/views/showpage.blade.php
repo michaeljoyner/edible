@@ -1,7 +1,8 @@
-{{--edible page view--}}
+@extends('admin.base')
 
-{{--to go in body--}}
-    <div class="edible-page-header">
+
+@section('content')
+    <div class="ed-page-header">
         <h1 class="pull-left">Manage the content for the {{ $page->name }} page</h1>
         <hr>
     </div>
@@ -20,7 +21,7 @@
             </div>
             <footer class="ed-textblock-footer">
                 <a href="/package-edible/pages/{{ $page->id }}/textblocks/{{ $textblock->id }}/edit">
-                    <div class="btn edible-btn btn-light">Edit</div>
+                    <div class="btn ed-btn btn-light">Edit</div>
                 </a>
             </footer>
         </div>
@@ -46,8 +47,12 @@
             </div>
             <footer class="ed-gallery-footer">
                 <a href="/package-edible/pages/{{ $page->id }}/galleries/{{ $gallery->id }}/edit">
-                    <div class="btn edible-btn btn-light">Edit</div>
+                    <div class="btn ed-btn btn-light">Edit</div>
+                </a>
+                <a href="/package-edible/galleries/{{ $gallery->id }}/order">
+                    <div class="btn e-btn btn-light">Arrange Order</div>
                 </a>
             </footer>
         </div>
     @endforeach
+@endsection
