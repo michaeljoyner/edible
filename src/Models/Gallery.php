@@ -58,5 +58,32 @@ class Gallery extends Model implements HasMediaConversions
         return $image->getUrl($conversion);
     }
 
+    public function setOrder($orderedIds)
+    {
+        $media = $this->getMedia();
+        if (count($orderedIds) !== $media->count()) {
+            throw new \Exception('incorrect amount of ids given');
+        }
 
+        for ($i = 0; $i < count($orderedIds); $i++) {
+            $image = $media->where('id', intval($orderedIds[$i]))->first();
+            if ($image) {
+                $image->setCustomProperty('position', $i + 1);
+                $image->save();
+            }
+        }
+    }
+
+    public function getOrdered()
+    {
+        $media = $this->getMedia();
+
+        return $media->sort(function ($a, $b) {
+            if ($a->getCustomProperty('position', -1) === $b->getCustomProperty('position', -1)) {
+                return 0;
+            }
+
+            return $a->getCustomProperty('position', -1) < $b->getCustomProperty('position', -1) ? -1 : 1;
+        });
+    }
 }
