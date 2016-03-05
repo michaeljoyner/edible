@@ -29,7 +29,7 @@ class EdibleServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'edible');
 
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views/vendor/edible'),
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/edible'),
         ]);
 
 //        if(config('edible.menu_view')) {
