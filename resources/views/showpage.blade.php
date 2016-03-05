@@ -50,7 +50,7 @@
                     <div class="btn ed-btn btn-light">Edit</div>
                 </a>
                 <a href="/package-edible/galleries/{{ $gallery->id }}/order">
-                    <div class="btn e-btn btn-light">Arrange Order</div>
+                    <div class="btn ed-btn btn-light">Arrange Order</div>
                 </a>
             </footer>
         </div>

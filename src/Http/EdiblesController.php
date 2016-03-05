@@ -80,7 +80,7 @@ class EdiblesController extends Controller
         $gallery = Gallery::findOrFail($id);
         $images = $gallery->getOrdered();
 
-        return view('vendor.edible.order')->with(compact('gallery', 'images'));
+        return view('vendor.edible.ordergallery')->with(compact('gallery', 'images'));
     }
 
     public function setGalleryOrder(Request $request, $id)
