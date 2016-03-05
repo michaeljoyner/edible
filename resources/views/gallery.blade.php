@@ -38,7 +38,6 @@
             ></dropzone>
         </div>
     @endif
-@endsection
 
 {{--to go in scripts section--}}
     @if($gallery->is_single)

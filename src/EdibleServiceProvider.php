@@ -31,14 +31,6 @@ class EdibleServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/vendor/edible'),
         ]);
-
-//        if(config('edible.menu_view')) {
-//            view()->composer(config('menu_view'), function ($view) {
-//                $ediblePages = (new ContentRepository())->getPageListWithUrls();
-//
-//                return $view->with('ediblePages', $ediblePages);
-//            });
-//        }
     }
 
     /**

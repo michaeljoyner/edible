@@ -59,7 +59,7 @@ class ContentRepository
         return collect(Page::all()->map(function($page) {
             return [
                 'name' => $page->name,
-                'url' => '/admin/site-content/pages/'.$page->id
+                'url' => '/package-edible/pages/'.$page->id
             ];
         })->toArray());
     }
