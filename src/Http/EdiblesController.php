@@ -9,7 +9,9 @@
 namespace Michaeljoyner\Edible\Http;
 
 
-class EdiblesController extends BaseController
+use Illuminate\Routing\Controller;
+
+class EdiblesController extends Controller
 {
     public function showPage($pageId)
     {
