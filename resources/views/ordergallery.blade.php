@@ -49,7 +49,7 @@
             methods: {
                 postOrder: function() {
                     this.syncs = this.syncs + 1;
-                    this.$http.post('/admin/galleries/{{ $gallery->id }}/order', {order: this.sortable.toArray()}, function(res) {
+                    this.$http.post('/package-edible/galleries/{{ $gallery->id }}/order', {order: this.sortable.toArray()}, function(res) {
                         if(res === 'ok') {
                             this.syncs = this.syncs - 1;
                         }
