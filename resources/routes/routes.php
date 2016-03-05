@@ -1,8 +1,5 @@
 <?php
 
-Route::get('/hello', function() {
-   return 'hello';
-});
 Route::group(['prefix' => 'package-edible', 'namespace' => 'Michaeljoyner\Edible\Http'], function() {
     Route::get('pages/{pageId}', 'EdiblesController@showPage');
     Route::get('pages/{pageId}/textblocks/{textblockId}/edit', 'EdiblesController@editTextblock');

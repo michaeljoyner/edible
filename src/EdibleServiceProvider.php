@@ -19,6 +19,10 @@ class EdibleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (! $this->app->routesAreCached()) {
+            require __DIR__.'/../resources/routes/routes.php';
+        }
+        
         $this->publishesMigrations();
         $this->publishesConfig();
 
@@ -30,9 +34,7 @@ class EdibleServiceProvider extends ServiceProvider
             });
         }
 
-        if (! $this->app->routesAreCached()) {
-            require __DIR__.'/../resources/routes/routes.php';
-        }
+
     }
 
     /**
