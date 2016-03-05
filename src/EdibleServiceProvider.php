@@ -30,6 +30,10 @@ class EdibleServiceProvider extends ServiceProvider
             });
         }
 
+        if (! $this->app->routesAreCached()) {
+            require __DIR__.'/../resources/routes/routes.php';
+        }
+
 
     }
 
