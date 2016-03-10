@@ -76,6 +76,18 @@ class ContentPagesTest extends TestCase
         $this->assertEquals('Once I was a warthog', $page->textFor('intro'));
     }
 
+    /**
+     *@test
+     */
+    public function text_for_returns_a_default_value_if_supplied_and_if_no_content_value_exists()
+    {
+        $page = ContentRepository::makePage('test');
+        $page->addTextblock('intro', 'an introduction', false, '');
+
+        $this->assertEquals('this is the default', $page->textFor('intro', 'this is the default'));
+        $this->assertEquals('also a default', $page->textFor('nonexisting block', 'also a default'));
+    }
+
     // /**
     //  *@test
     //  */

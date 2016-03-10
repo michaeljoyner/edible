@@ -31,15 +31,15 @@ class Page extends Model
         ]);
     }
 
-    public function textFor($textblockName)
+    public function textFor($textblockName, $default = '')
     {
         try {
             $textblock = $this->textblocks()->where('name', $textblockName)->firstOrFail();
         } catch (\Exception $e) {
-            return '';
+            return $default;
         }
 
-        return $textblock->content;
+        return empty($textblock->content) ? $default : $textblock->content;
     }
 
     public function galleries()
@@ -68,6 +68,6 @@ class Page extends Model
             return collect([]);
         }
 
-        return $gallery->getMedia();
+        return $gallery->getOrdered();
     }
 }

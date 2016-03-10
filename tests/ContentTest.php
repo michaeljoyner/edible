@@ -112,8 +112,8 @@ class ContentTest extends TestCase
         $about = Page::create(['name' => 'about', 'description' => 'The about page']);
 
         $expected = collect([
-            ['name' => 'home', 'url' => '/admin/site-content/pages/'.$home->id],
-            ['name' => 'about', 'url' => '/admin/site-content/pages/'.$about->id]
+            ['name' => 'home', 'url' => '/package-edible/pages/'.$home->id],
+            ['name' => 'about', 'url' => '/package-edible/pages/'.$about->id]
         ]);
 
         $this->assertEquals($expected, $repo->getPageListWithUrls());
