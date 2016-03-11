@@ -84,6 +84,6 @@ class Gallery extends Model implements HasMediaConversions
             }
 
             return $a->getCustomProperty('position', -1) < $b->getCustomProperty('position', -1) ? -1 : 1;
-        });
+        })->values();
     }
 }
