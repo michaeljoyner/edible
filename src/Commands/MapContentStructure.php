@@ -6,6 +6,7 @@ use Michaeljoyner\Edible\ContentRepository;
 use Michaeljoyner\Edible\ContentSnapshotFactory;
 use Michaeljoyner\Edible\ContentWriter;
 use Illuminate\Console\Command;
+use Michaeljoyner\Edible\ContentWriterFactory;
 use Michaeljoyner\Edible\Exceptions\MissingEdibleFileException;
 use Symfony\Component\Yaml\Parser;
 
@@ -24,6 +25,9 @@ class MapContentStructure extends Command
      * @var string
      */
     protected $description = 'Maps the content structure defined in your edible.yml file to your database';
+    /**
+     * @var ContentWriterFactory
+     */
 
     /**
      * Create a new command instance.
@@ -44,7 +48,7 @@ class MapContentStructure extends Command
             throw new MissingEdibleFileException;
         }
 
-        $writer = $this->makeWriter();
+        $writer = ContentWriterFactory::makeWriter();
         $this->showChanges($writer->additions(), $writer->deletions());
 
         if($this->confirm('Are you sure you want to continue? [y|N]')) {
@@ -54,13 +58,6 @@ class MapContentStructure extends Command
             $this->warn('aborted');
         }
 
-    }
-
-    protected function makeWriter()
-    {
-        $fileSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromYmlFile(base_path('edible.yaml'));
-        $databaseSnapshot = (new ContentSnapshotFactory(new Parser()))->makeSnapshotFromRepo(new ContentRepository());
-        return new ContentWriter($fileSnapshot, $databaseSnapshot);
     }
 
     protected function showChanges($additions, $deletions)
