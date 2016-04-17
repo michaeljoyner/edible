@@ -2,11 +2,35 @@
 
 Maps a content structure (consisting of pages with textblocks and galleries) to Eloquent models in your Laravel application. The user, usually in some sort of admin section, can then edit the contents of the textblocks and galleries, but have no control over the creation and deletion of them.
 
+## Assumptions
+
+This package is very opinionated, as it is structured to work with how I set up my workflow/site structure. Due to that it makes several large assumptions, which I hopefully can get rid of in the future. However, for now, this package assumes:
+
++ Vue.js, along with vue-resource are included in your scripts. Additionally, the vue components included in this package are registered with Vue
++ TinyMCE is included and available
++ The css included in the css directory is included in any of the applicable pages
+
 ## Installation and Setup
 
-Get the package: `composer require michaeljoyner/edible`
+Install the package via composer:
+ 
+ `composer require michaeljoyner/edible`
 
-Publish the migrations and views: `php artisan vendor:publish --provider="Michaeljoyner\Edible\EdibleServiceProvider"`
+Add the service provider:
+
+````php
+//config/app.php
+
+$providers = [
+    ...
+    Michaeljoyner\Edible\EdibleServiceProvider::class,
+    ...
+];
+````
+
+Publish the migrations and views: 
+
+`php artisan vendor:publish --provider="Michaeljoyner\Edible\EdibleServiceProvider"`
 
 You will have to go to your `resources/views/vendor` folder to adjust the views to work with your view structure.
 
@@ -61,3 +85,21 @@ Once your edible.yaml file is complete, you may run `php artisan edible:map`. Yo
  
  *DO NOT* modify the name of an existing page, textblock or gallery as *YOU WILL LOSE THE EXISTING CONTENT*. Rather ensure you get the names and descriptions correct before pushing your changes live. By editing the name of an existing page, textblock or gallery, when you next map, it will treat that as a new instance, and delete the "old" one along with its contents.
 
+## Editing content
+
+The service provider registers routes to point to each page described in your edible file from where you can edit/manage each textblock or gallery. What I normally do, and hope to include automatically soon, is make a view composer for my admin section's navbar to provide a list of the pages and their urls to the navbar view so I can create the menu links. The `ContentRepository->getPageListWithUrls()` method exists for this reason.
+
+## Using content in the views
+
+The `Michaeljoyner\Edible\ContentRepository` class is how you access the content to include in your views. Typically in your controller you would use the ContentRepository method `getPageByName` to retrieve the desired page. This will return an instance of `Michaeljoyner\Edible\Models\Page` which can be used to get contents. Below should give an example
+
+````php
+// $page is an instance of Michaeljoyner\Edible\Models\Page
+
+// to get the contents of a textblock
+$page->textFor('name-of-textblock', 'default string'); // returns a string
+
+// to get the images of a gallery
+
+$page->imagesOf('gallery-name') // returns a laravel collection of Spatie's Laravel-MediaLibrary Media objects
+````
