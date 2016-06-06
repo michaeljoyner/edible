@@ -34,8 +34,17 @@ class Gallery extends Model implements HasMediaConversions
             ->performOnCollections('default');
 
         $this->addMediaConversion('wide')
-            ->setManipulations(['w' => 1200, 'h' => 500, 'fit' => 'max'])
+            ->setManipulations($this->getWideManipulation())
             ->performOnCollections('default');
+    }
+
+    protected function getWideManipulation()
+    {
+        return [
+            'w' => config('edible.wide_width', 1200),
+            'h' => config('edible.wide_height', 600),
+            'fit' => 'max'
+        ];
     }
 
 
