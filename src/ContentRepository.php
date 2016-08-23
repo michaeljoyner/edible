@@ -25,7 +25,7 @@ class ContentRepository
 
     public function getPageByName($name)
     {
-        return Page::where('name', $name)->first();
+        return Page::with('textblocks', 'galleries')->where('name', $name)->first();
     }
 
     public function listPages()
